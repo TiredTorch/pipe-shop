@@ -1,0 +1,78 @@
+{
+  "name": "pipe-shop-frontend",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/pipe-shop-frontend/src",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nx/vite:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "outputPath": "dist/apps/pipe-shop-frontend"
+      },
+      "configurations": {
+        "development": {
+          "mode": "development"
+        },
+        "production": {
+          "mode": "production"
+        }
+      }
+    },
+    "serve": {
+      "executor": "@nx/vite:dev-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "pipe-shop-frontend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "pipe-shop-frontend:build:development",
+          "hmr": true
+        },
+        "production": {
+          "buildTarget": "pipe-shop-frontend:build:production",
+          "hmr": false
+        }
+      }
+    },
+    "preview": {
+      "executor": "@nx/vite:preview-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "pipe-shop-frontend:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "pipe-shop-frontend:build:development"
+        },
+        "production": {
+          "buildTarget": "pipe-shop-frontend:build:production"
+        }
+      }
+    },
+    "test": {
+      "executor": "@nx/vite:test",
+      "outputs": ["coverage/apps/pipe-shop-frontend"],
+      "options": {
+        "passWithNoTests": true,
+        "reportsDirectory": "../../coverage/apps/pipe-shop-frontend"
+      }
+    },
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/pipe-shop-frontend/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "serve-static": {
+      "executor": "@nx/web:file-server",
+      "options": {
+        "buildTarget": "pipe-shop-frontend:build"
+      }
+    }
+  },
+  "tags": []
+}
