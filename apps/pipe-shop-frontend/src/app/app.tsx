@@ -1,14 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-import styles from "./app.module.scss";
 
-import NxWelcome from "./nx-welcome";
-
-export function App() {
+const App = () => {
   return (
-    <div>
-      <NxWelcome title="pipe-shop-frontend" />
-    </div>
-  );
+    <div>App</div>
+  )
 }
 
-export default App;
+export default App

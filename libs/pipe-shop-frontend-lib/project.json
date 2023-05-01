@@ -1,0 +1,16 @@
+{
+  "name": "pipe-shop-frontend-lib",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/pipe-shop-frontend-lib/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "lint": {
+      "executor": "@nx/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/pipe-shop-frontend-lib/**/*.{ts,tsx,js,jsx}"]
+      }
+    }
+  }
+}
