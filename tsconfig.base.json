@@ -15,9 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@pipe-shop/pipe-shop-backend-lib": [
-        "libs/pipe-shop-backend-lib/src/index.ts"
-      ],
       "@pipe-shop/pipe-shop-frontend-lib": [
         "libs/pipe-shop-frontend-lib/src/index.ts"
       ],

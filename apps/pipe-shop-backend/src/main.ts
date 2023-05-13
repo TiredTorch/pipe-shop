@@ -1,14 +1,11 @@
-import express from 'express';
+import { NestFactory } from '@nestjs/core';
+import { AppModule } from './app/app.module';
 
-const host = process.env.HOST ?? 'localhost';
-const port = process.env.PORT ? Number(process.env.PORT) : 3000;
+async function bootstrap() {
+  const app = await NestFactory.create(AppModule);
+  app.enableCors()
+  await app.listen(4202);
+}
 
-const app = express();
-
-app.get('/', (req, res) => {
-  res.send({ message: 'Hello API' });
-});
-
-app.listen(port, host, () => {
-  console.log(`[ ready ] http://${host}:${port}`);
-});
+bootstrap();
+  

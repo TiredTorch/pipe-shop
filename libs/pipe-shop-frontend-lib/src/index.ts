@@ -1,1 +1,4 @@
-export * from './lib/pipe-shop-frontend-lib';
+export * from './lib/types';
+export * from "./lib/hocs"
+export * from "./lib/containsers"
+export * from "./lib/redux"

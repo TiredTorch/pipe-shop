@@ -41,3 +41,34 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+.ant-checkbox-group-item {
+    margin-inline-start: 8px;
+		font-family: Signika;
+		font-size: calc(.8vmin + 10px);
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(110, 110, 110);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(110, 110, 110);
+}
+
+::-webkit-scrollbar-track-piece {
+    background: transparent;
+}
+.ant-image {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+}
